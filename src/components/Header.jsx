@@ -1,10 +1,10 @@
 const Header = () => {
-    return
-    <header>
+    return  <header>
         <div>
-          <p>C</p>
-        <h1>Character Counter</h1>
+            <p>C</p>
+            <h1>Character Counter</h1>
         </div>
+        <button>*</button>
     </header>
 }
 
