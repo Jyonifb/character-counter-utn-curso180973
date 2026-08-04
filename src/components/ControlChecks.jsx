@@ -1,17 +1,23 @@
-const ControlChecks = () => {
+const ControlChecks = ({ 
+    excludeSpaces, 
+    handleExcludeSpaces,
+    limitCharacter, 
+    handleChangeInputLimit, 
+    limitValue, 
+    handleLimitValue }) => {
 
     return <div>
         <label >
-        <input t
+        <input
           type="checkbox" 
           checked={excludeSpaces}
-          onChange={() => setExcludeSpaces
+          onChange={() => handleExcludeSpaces
           (!excludeSpaces)}
         />
         Excluir espacios
         </label>
         <label >
-        <input t
+        <input
           type="checkbox" 
           checked={limitCharacter}
           onChange={handleChangeInputLimit}
@@ -22,7 +28,7 @@ const ControlChecks = () => {
           limitCharacter && <input 
           type="number" 
           value={limitValue}
-          onChange={(e) => setLimitValue(e.target.value)}
+          onChange={(e) => handleLimitValue(e.target.value)}
         />
         }
       </div>

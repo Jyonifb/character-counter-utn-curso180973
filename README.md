@@ -8,7 +8,7 @@
 
 ## Anexo:
 
-#### Agrego datos de Commit realizado en local que no se subieron al repositorio: 
+#### Agrego datos de Commit realizado en local que no se subieron al repositorio por error: 
 
 ```PC Two Remaster@DESKTOP-8LUG3VI MINGW64 ~/Desktop/clase-21/character-counter-utn-curso180973 (master)
 $ git add .

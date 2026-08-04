@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Header } from "./components/Header.jsx"
 import { WriteArea } from "./components/WriteArea.jsx"
 import { ControlChecks } from "./components/ControlChecks.jsx"
+import { Stats } from "./components/Stats.jsx"
 
 const App = () => {
 
@@ -99,10 +100,13 @@ const App = () => {
         handleLimitValue ={handleLimitValue}
       />
 
-      <p>Cantidad de caracteres: {characters}</p>
-      <p>Cantidad de palabras: {words}</p>
-      <p>Cantidad de oraciones: {sentences}</p>
-      <p>Tiempo aprox de Lectura &lt; {readingTime} min</p>
+      <Stats 
+      characters ={characters} 
+      words ={words}
+      sentences ={sentences}
+      readingTime ={readingTime}
+      />
+
       <section>
         <h2>Cantidad de Letras</h2>
         {/*<button onClick={() => setShowAll(!showAll)}>{showAll ? "Ver Menos ▲" : "Ver Todos ▼" }</button>*/}
