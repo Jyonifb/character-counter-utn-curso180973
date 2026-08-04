@@ -108,9 +108,10 @@ const App = () => {
       readingTime ={readingTime}
       />
 
-      <LetterDensity
-        sortLetters={sortLetters}
-      />
+      {
+        text && <LetterDensity sortLetters={sortLetters} />
+      }
+      
 
     </main>
     
