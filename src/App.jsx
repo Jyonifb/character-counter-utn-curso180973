@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Header } from "./components/Header.jsx"
 import { WriteArea } from "./components/WriteArea.jsx"
+import { ControlChecks } from "./components/ControlChecks.jsx"
 
 const App = () => {
 
@@ -10,6 +11,14 @@ const App = () => {
   const [limitCharacter, setLimitcharacter] = useState(false)
   const [limitValue, setLimitValue] = useState(10)
   const [showAll, setShowAll] = useState(false)
+
+  const handleExcludeSpaces = () => {
+    setExcludeSpaces(!excludeSpaces)
+  }
+
+  const handleLimitValue = () => {
+    setLimitValue(!limitValue)
+  }
 
   const characters = excludeSpaces ? text.replace(/\s/g, "").length : text.length
 
@@ -75,48 +84,21 @@ const App = () => {
       <Header />
       <h2>Analyze your text <br />
         in real-time.</h2>
-     
-      {/*<textarea 
-          placeholder="Escribe tu texto..."
-          onChange={(e)=> setText(e.target.value)}
-          value = {text}
-      ></textarea>*/}
 
       <WriteArea
       handleChangeTextarea={handleChangeTextarea}
       text ={text}
       />
+      
+      <ControlChecks
+        excludeSpaces ={excludeSpaces} 
+        handleExcludeSpaces ={handleExcludeSpaces}
+        limitCharacter ={limitCharacter} 
+        handleChangeInputLimit ={handleChangeInputLimit} 
+        limitValue ={limitValue} 
+        handleLimitValue ={handleLimitValue}
+      />
 
-
-      <div>
-
-        <label >
-        <input t
-          type="checkbox" 
-          checked={excludeSpaces}
-          onChange={() => setExcludeSpaces
-          (!excludeSpaces)}
-        />
-        Excluir espacios
-        </label>
-      </div>
-            <div>
-        <label >
-        <input t
-          type="checkbox" 
-          checked={limitCharacter}
-          onChange={handleChangeInputLimit}
-        />
-        Límite de caracteres
-        </label>
-        {
-          limitCharacter && <input 
-          type="number" 
-          value={limitValue}
-          onChange={(e) => setLimitValue(e.target.value)}
-        />
-        }
-      </div>
       <p>Cantidad de caracteres: {characters}</p>
       <p>Cantidad de palabras: {words}</p>
       <p>Cantidad de oraciones: {sentences}</p>
