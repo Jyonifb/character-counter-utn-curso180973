@@ -3,6 +3,7 @@ import { Header } from "./components/Header.jsx"
 import { WriteArea } from "./components/WriteArea.jsx"
 import { ControlChecks } from "./components/ControlChecks.jsx"
 import { Stats } from "./components/Stats.jsx"
+import { LetterDensity } from "./components/LetterDensity.jsx"
 
 const App = () => {
 
@@ -107,34 +108,9 @@ const App = () => {
       readingTime ={readingTime}
       />
 
-      <section>
-        <h2>Cantidad de Letras</h2>
-        {/*<button onClick={() => setShowAll(!showAll)}>{showAll ? "Ver Menos ▲" : "Ver Todos ▼" }</button>*/}
-        <article>
-         { 
-          sortLetters.slice(0,5).map(letter => 
-          <div key={letter.letterName}>
-            <span>{letter.letterName.toUpperCase()}</span>
-            <meter min="0" max="100" value={letter.percentage}></meter>
-            <span>{letter.amount} ({letter.percentage.toFixed(2)}%)</span>
-          </div> )
-          }
-        </article>
-
-      <details>
-        <summary>See more</summary>
-        <ul className="meter-list">
-          { 
-          sortLetters.slice(5, sortLetters.length).map(letter => 
-          <div key={letter.letterName}>
-            <span>{letter.letterName.toUpperCase()}</span>
-            <meter min="0" max="100" value={letter.percentage}></meter>
-            <span>{letter.amount} ({letter.percentage.toFixed(2)}%)</span>
-          </div> )
-          }
-        </ul>
-      </details>
-      </section>
+      <LetterDensity
+        sortLetters={sortLetters}
+      />
 
     </main>
     
