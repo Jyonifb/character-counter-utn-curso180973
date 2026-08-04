@@ -1,14 +1,14 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Header } from "./components/Header.jsx"
 import { WriteArea } from "./components/WriteArea.jsx"
 import { ControlChecks } from "./components/ControlChecks.jsx"
 import { Stats } from "./components/Stats.jsx"
 import { LetterDensity } from "./components/LetterDensity.jsx"
+import { ThemeContext } from "./context/ThemeContext.jsx"
 
 const App = () => {
 
-  const [dark, setDark] = useState(JSON.parse(localStorage.getItem("theme")) === "dark" ? true : false)
-
+  
   const [text, setText] = useState ("Design is the silent ambassador of your brand. Simplicity is key to effective communication, creating clarity in every interaction. A great design transforms complex ideas into elegant solutions, making them easy to understand. It blends aesthetics and functionality seamlessly.")
   
   const [excludeSpaces, setExcludeSpaces] = useState(false)
@@ -16,14 +16,7 @@ const App = () => {
   const [limitValue, setLimitValue] = useState(10)
   const [showAll, setShowAll] = useState(false)
 
-  const handleDarkTheme = () => {
-    setDark(!dark)
-    if (!dark) {
-      localStorage.setItem("theme", JSON.stringify("dark"))
-    } else {
-      localStorage.removeItem("theme")
-    }
-  }
+  const {dark, handleDarkTheme} = useContext(ThemeContext)
 
   const handleExcludeSpaces = () => {
     setExcludeSpaces(!excludeSpaces)
