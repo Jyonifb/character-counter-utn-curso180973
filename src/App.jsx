@@ -99,13 +99,13 @@ const App = () => {
         handleChangeInputLimit ={handleChangeInputLimit} 
         limitValue ={limitValue} 
         handleLimitValue ={handleLimitValue}
+        readingTime={readingTime}
       />
 
       <Stats 
       characters ={characters} 
       words ={words}
       sentences ={sentences}
-      readingTime ={readingTime}
       />
 
       {

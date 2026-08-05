@@ -4,7 +4,8 @@ const ControlChecks = ({
     limitCharacter, 
     handleChangeInputLimit, 
     limitValue, 
-    handleLimitValue }) => {
+    handleLimitValue,
+    readingTime }) => {
 
     return <div>
         <label >
@@ -31,6 +32,7 @@ const ControlChecks = ({
           onChange={(e) => handleLimitValue(e.target.value)}
         />
         }
+        <p>Tiempo aprox de Lectura &lt; {readingTime} min</p>
       </div>
 
 

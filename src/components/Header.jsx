@@ -4,10 +4,10 @@ const Header = ({dark, handleDarkTheme}) => {
 
     return  <header>
         <div>
-            <p>C</p>
-            <h1>Character Counter</h1>
+            <img class="img-logo" src="./src/assets/icono-logo.png" alt="icono del logo"/>            
+            <h1 class="character">Character Counter</h1>
         </div>
-        <button onClick={() => handleDarkTheme(!dark)} >*</button>
+        <button onClick={() => handleDarkTheme(!dark)} class="theme-button">☀</button>
     </header>
 }
 
