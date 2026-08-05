@@ -14,6 +14,22 @@
 
     --progress:#D19BFF;
 
+    --bg-main:#12131A;
+    --bg-card:#1C1F2A;
+
+    --text-main:#F2F2F7;
+    --text-secondary:#B4B7C9;
+
+    --purple:#C99DFF;
+    --orange:#FFB21E;
+    --coral:#FF8A65;
+
+    --border:#2A2D3A;
+    --progress:#D19BFF;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
 }
 
 *{
@@ -46,7 +62,7 @@ textarea{
 Header{
 
     margin:auto;
-    padding:40px 0;
+    padding:10px 0;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -63,6 +79,7 @@ header div {
     display:flex;
     justify-content: space-evenly;
     align-items:center;
+    margin-left: 10px;
   }
 
 .img-logo{
@@ -88,21 +105,19 @@ header div {
     color: var(--text-main);
     cursor:pointer;
     transition:.3s;
-    margin-right: 35px;
+    margin-right: 10px;
 
 }
 
-main h2{
-  font-size: 50px;
-  text-align: center;
-
+.theme-button:hover{
+    transform:translateY(-6px);
+    transition:.3s;
 }
-
 
 textarea{
 
-    margin-bottom:10px;
-    width:100%;
+    margin:10px;
+    width:98%;
     min-height:180px;
     padding:24px;
     background:var(--card);
@@ -116,7 +131,90 @@ textarea{
 
 }
 
+.checks{
+    display: flex;
+    color:var(--text-secondary);
+    margin: 0 15px 0;
+    justify-content: space-between;
+}
 
+label{
+  margin-right: 5px;
+}
+
+input[type="checkbox"] {
+    /*appearance: none;
+    -webkit-appearance: none;*/
+
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #7a7a7a;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+
+    position:relative;
+    margin-right: 5px;
+
+}
+
+.cards{
+    display: flex;
+    justify-content:space-between;
+    margin: 25px 25px 25px;
+
+}
+
+.card{  
+    border-radius: 16px;
+    width: 260px;
+    height: 160px;   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding:  12px;
+
+}
+
+#purple {
+    background-image: url(./src/assets/fondo-tarjeta-1.png); 
+    background-size: cover;  
+}
+
+#orange {
+    background-image: url(./src/assets/fondo-tarjeta-2.png);  
+    background-size: cover;
+}
+
+#darkorange {
+    background-image: url(./src/assets/fondo-tarjeta-3.png); 
+    background-size: cover;  
+}
+
+.card h2{
+
+    font-size:4rem;
+    color:var(--bg-main);
+    
+}
+
+.card p{
+
+    font-size:24px;
+    color:var(--bg-main);
+    font-weight:500;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+main h2{
+  font-size: 50px;
+  text-align: center;
+
+}
 
 /*Main Stats{
 

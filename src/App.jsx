@@ -13,7 +13,7 @@ const App = () => {
   
   const [excludeSpaces, setExcludeSpaces] = useState(false)
   const [limitCharacter, setLimitcharacter] = useState(false)
-  const [limitValue, setLimitValue] = useState(10)
+  const [limitValue, setLimitValue] = useState(300)
   const [showAll, setShowAll] = useState(false)
 
   const {dark, handleDarkTheme} = useContext(ThemeContext)
