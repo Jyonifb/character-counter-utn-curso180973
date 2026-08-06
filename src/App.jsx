@@ -48,7 +48,7 @@ const App = () => {
 
   }
 
-  console.log(limitCharacter, limitValue)
+  
 
   const characters = excludeSpaces ? text.replace(/\s/g, "").length : text.length
 
@@ -62,6 +62,7 @@ const App = () => {
   const totalLetter = cleanText.length
 
   const dictionaryLetters = {} 
+
 
   cleanText.split("").forEach(letter => {
     dictionaryLetters[letter] = (dictionaryLetters[letter] || 0) + 1
@@ -114,8 +115,7 @@ const App = () => {
       {
         text && <LetterDensity sortLetters={sortLetters} />
       }
-      
-
+    
     </main>
     
     
