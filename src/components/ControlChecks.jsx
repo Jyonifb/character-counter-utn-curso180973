@@ -26,7 +26,7 @@ const ControlChecks = ({
             />
             Límite de caracteres
           </label>
-        </div>
+        
         {
           limitCharacter && <input
           type="number" 
@@ -34,6 +34,7 @@ const ControlChecks = ({
           onChange={(e) => handleLimitValue(e.target.value)}
         />
         }
+        </div>
         <p className="reading-time">Tiempo aprox de Lectura &lt; {readingTime} min</p>
       
       </section>

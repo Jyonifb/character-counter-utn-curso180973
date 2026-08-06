@@ -12,7 +12,7 @@ const App = () => {
   const [text, setText] = useState ("Design is the silent ambassador of your brand. Simplicity is key to effective communication, creating clarity in every interaction. A great design transforms complex ideas into elegant solutions, making them easy to understand. It blends aesthetics and functionality seamlessly.")
   
   const [excludeSpaces, setExcludeSpaces] = useState(false)
-  const [limitCharacter, setLimitcharacter] = useState(false)
+  const [limitCharacter, setLimitCharacter] = useState(false)
   const [limitValue, setLimitValue] = useState(300)
   const [showAll, setShowAll] = useState(false)
 
@@ -22,8 +22,9 @@ const App = () => {
     setExcludeSpaces(!excludeSpaces)
   }
 
-  const handleLimitValue = () => {
-    setLimitValue(!limitValue)
+  const handleLimitValue = (value) => {
+    const nextValue = value === "" ? 0 : Number(value)
+    setLimitValue(nextValue)
   }
 
   const handleChangeTextarea = (e) => {
@@ -41,7 +42,7 @@ const App = () => {
   }
 
   const handleChangeInputLimit = () => {
-    setLimitcharacter (!limitCharacter)
+    setLimitCharacter (!limitCharacter)
     const newText = text.slice(0, limitValue)
     setText(newText)
 
