@@ -7,9 +7,9 @@ const ControlChecks = ({
     handleLimitValue,
     readingTime }) => {
 
-    return <section class="checks">
-        <div class="checks">
-          <label class="checkbox">
+    return <section className="checks">
+        <div className="checksd">
+          <label className="checkbox">
             <input
               type="checkbox" 
               checked={excludeSpaces}
@@ -18,7 +18,7 @@ const ControlChecks = ({
             />
             Excluir espacios
           </label>
-          <label class="checkbox">
+          <label className="checkbox">
             <input
               type="checkbox" 
               checked={limitCharacter}
@@ -34,7 +34,7 @@ const ControlChecks = ({
           onChange={(e) => handleLimitValue(e.target.value)}
         />
         }
-        <p class="reading-time">Tiempo aprox de Lectura &lt; {readingTime} min</p>
+        <p className="reading-time">Tiempo aprox de Lectura &lt; {readingTime} min</p>
       
       </section>
 

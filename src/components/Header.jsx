@@ -2,12 +2,12 @@ import { useState } from "react"
 
 const Header = ({dark, handleDarkTheme}) => {
 
-    return  <header>
+    return  <header >
         <div>
-            <img class="img-logo" src="./src/assets/icono-logo.png" alt="icono del logo"/>            
-            <h1 class="character">Character Counter</h1>
+            <img className="img-logo" src="./src/assets/icono-logo.png" alt="icono del logo"/>            
+            <h1 className="character">Character Counter</h1>
         </div>
-        <button onClick={() => handleDarkTheme(!dark)} class="theme-button">☀</button>
+        <button onClick={() => handleDarkTheme(!dark)} className="theme-button">☀</button>
     </header>
 }
 

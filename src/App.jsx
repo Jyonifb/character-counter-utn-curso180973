@@ -47,6 +47,8 @@ const App = () => {
 
   }
 
+  console.log(limitCharacter, limitValue)
+
   const characters = excludeSpaces ? text.replace(/\s/g, "").length : text.length
 
   const words = text.trim() === "" ? 0 : text.trim().split(/\s+/g).length
