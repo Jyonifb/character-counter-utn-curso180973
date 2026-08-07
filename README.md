@@ -1,14 +1,64 @@
 # Character Counter UTN curso 180973
 
-## 
+## Objetivo
+Replicar de manera visual y funcional la interfaz Character Counter utilizando React.
+
+## Tecnologías
+- React
+- HTML
+- CSS3
+- Flexbox
+- CSS Grid
+- javascript
+- jsx
+
+## Estructura HTML
+- Header
+- Main
+- Textarea
+- Checks
+- Tarjetas de métricas
+- Letter Density
+
+## CSS
+Se utilizaron:
+- Components
+- Context
+- Variables CSS
+- Flexbox
+- Grid
+- Hover
+- Regex
+
+## Dificultades encontradas
+- Componetizar 
+- Campo para agregar límite de caracteres
+- Estilizar las barras de progreso
 
 
+## Capturas 
+
+- Versión Final:
+
+   - Web:
+
+ ![Versión Final de la pagina web](./captures-markdown/imagen-captura-01-finalweb.png)
+
+## Vercel
+
+- Link a página desplegada en Vercel: [Ir a la página character-counter-utn-curso180973.vercel.app](https://character-counter-utn-curso180973.vercel.app/)
 
 
 
 ## Anexo:
 
-#### Agrego datos de Commit realizado en local que no se subieron al repositorio por error: 
+#### Observaciónes adicionales
+
+- Tuve que realizar una modificación en el campo para limit character value ya que estaba funcionando como un campo booleano y no permitía ingresar valores.
+- Agregué lo que vimos de Contexto, si bien como la versión original de la página es oscura me quedaron invertidos los nombres de las variables con respecto a lo que se observa visualmente. 
+
+
+#### Agrego datos de Commit realizados en local que no se subieron al repositorio por error: 
 
 ```PC Two Remaster@DESKTOP-8LUG3VI MINGW64 ~/Desktop/clase-21/character-counter-utn-curso180973 (master)
 $ git add .
