@@ -42,7 +42,7 @@ Se utilizaron:
 
    - Web:
 
- ![Versión Final de la pagina web](./captures-markdown/imagen-captura-01-finalweb.png)
+ ![Versión Final de la pagina web](./src/captures-markdown/imagen-captura-01-finalweb.png)
 
 ## Vercel
 
