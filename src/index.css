@@ -317,8 +317,10 @@ meter::-webkit-meter-even-less-good-value {
   border: white;
 }
 
-
 main.dark-theme {
-  background-color: rgb(26, 25, 25);
-  color: white;
+  background-color: white;
+  color: rgb(26, 25, 25);
 }
+
+
+
