@@ -171,17 +171,17 @@ input[type="checkbox"] {
 }
 
 #purple {
-    background-image: url(./src/assets/fondo-tarjeta-1.png); 
+    background-image: url(/fondo-tarjeta-1.png); 
     background-size: cover;  
 }
 
 #orange {
-    background-image: url(./src/assets/fondo-tarjeta-2.png);  
+    background-image: url(/fondo-tarjeta-2.png);  
     background-size: cover;
 }
 
 #darkorange {
-    background-image: url(./src/assets/fondo-tarjeta-3.png); 
+    background-image: url(/fondo-tarjeta-3.png); 
     background-size: cover;  
 }
 
